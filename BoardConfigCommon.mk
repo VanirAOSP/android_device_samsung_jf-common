@@ -42,6 +42,7 @@ TARGET_KERNEL_SELINUX_CONFIG := jfselinux_defconfig
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6/bin/arm-eabi-
+TARGET_GCC_VERSION := 4.6
 
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/jf-common/recovery/recovery_keys.c
