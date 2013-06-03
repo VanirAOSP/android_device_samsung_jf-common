@@ -42,7 +42,7 @@ TARGET_KERNEL_SELINUX_CONFIG := jfselinux_defconfig
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 #Tune for cortex-a15
-TARGET_EXTRA_CFLAGS := -mtune=cortex-a15 -mcpu=cortex-a15
+TARGET_EXTRA_CFLAGS := -mtune=cortex-a15 -mcpu=cortex-a9
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
