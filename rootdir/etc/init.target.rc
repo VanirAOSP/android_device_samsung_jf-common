@@ -323,6 +323,11 @@ service bugreport /system/bin/dumpstate -d -p -B \
     class main
     disabled
     oneshot
+
+service ohshitbutton /system/bin/reboot
+    class main
+    disabled
+    oneshot
     keycodes 114 115 116
 
 # SISO-ANDR-PERF :: START Changing scheduler to row after boot complete
