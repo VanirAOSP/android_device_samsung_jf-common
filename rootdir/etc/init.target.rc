@@ -325,10 +325,6 @@ service ohshitbutton /system/bin/reboot
     class main
     disabled
     oneshot
-# SISO-ANDR-PERF :: START Changing scheduler to row after boot complete
-on property:sys.boot_completed=1
-    write /sys/block/mmcblk0/queue/scheduler row
-
 # insthk
 service insthk /system/bin/insthk
     class main
