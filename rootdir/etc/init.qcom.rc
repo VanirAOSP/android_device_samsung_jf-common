@@ -31,6 +31,8 @@ import init.target.rc
 import init.carrier.rc
 
 on init
+    export LD_PRELOAD "/system/lib/libsamsung_symbols.so"
+
     # Set permissions for persist partition
     mkdir /persist 0771 system system
 
@@ -164,6 +166,10 @@ on boot
     # initialize MDM modem
     write /sys/module/rmnet_usb/parameters/rmnet_data_init 1
     chown radio radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
+
+    # Adaptive LMK
+    write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
+    write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 53059
 
 on post-fs
     chown system system /sys/block/mmcblk0/queue/scheduler
