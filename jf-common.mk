@@ -106,8 +106,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.conf:/system/etc/gps.conf \
-    $(LOCAL_PATH)/configs/sap.conf:/system/etc/sap.conf \
-    $(LOCAL_PATH)/configs/izat.conf:/system/etc/izat.conf
+    $(LOCAL_PATH)/configs/sap.conf:/system/etc/sap.conf
 
 # Gello
 PRODUCT_PACKAGES += \
@@ -185,9 +184,9 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
 
-# Samsung symbols
+# RIL
 PRODUCT_PACKAGES += \
-    libsamsung_symbols
+    libshim_ril
 
 # SPN override
 PRODUCT_COPY_FILES += \
@@ -205,7 +204,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnetcmdiface \
     macloader \
-    dhcpcd.conf \
     hostapd \
     wpa_supplicant \
     wpa_supplicant.conf
